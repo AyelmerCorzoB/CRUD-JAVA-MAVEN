@@ -1,14 +1,14 @@
 package com.crudenjava;
 
-public class Producto {
+public class Estudiante {
     private int id;
     private String nombre;
-    private double precio;
+    private String grado;
 
-    public Producto(int id, String nombre, double precio) {
+    public Estudiante(int id, String nombre, String grado) {
         this.id = id;
         this.nombre = nombre;
-        this.precio = precio;
+        this.grado = grado;
     }
 
     public int getId() {
@@ -27,24 +27,23 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public double getPrecio() {
-        return precio;
+    public String getGrado() {
+        return grado;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setGrado(String grado) {
+        this.grado = grado;
     }
 
     @Override
     public String toString() {
         return "=============================\n" +
-               "     Detalles del Producto   \n" +
-               "=============================\n" +
-               "ID:          " + id + "\n" +
-               "Nombre:      " + nombre + "\n" +
-               "Precio:      $" + String.format("%.2f", precio) + "\n" +
-               "=============================";
+                "     Detalles del Estudiante   \n" +
+                "=============================\n" +
+                "ID:          " + id + "\n" +
+                "Nombre:      " + nombre + "\n" +
+                "Grado:      " + grado + "\n" +
+                "=============================";
     }
-
 
 }

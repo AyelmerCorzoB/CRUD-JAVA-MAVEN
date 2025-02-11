@@ -3,35 +3,35 @@ package com.crudenjava;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ProductoService {
-    private List<Producto> productos = new ArrayList<>();
+public class EstudianteService {
+    private List<Estudiante> estudiantes = new ArrayList<>();
 
-    public void agregarProducto(Producto producto) {
-        productos.add(producto);
-        System.out.println(producto);
+    public void agregarEstudiante(Estudiante estudiante) {
+        estudiantes.add(estudiante);
+        System.out.println(estudiante);
     }
 
-    public void listarProductos() {
-        System.out.println("Lista de productos: ");
-        for (Producto producto : productos) {
-            System.out.println(producto);
+    public void listarEstudiantes() {
+        System.out.println("Lista de estudiantes: ");
+        for (Estudiante estudiante : estudiantes) {
+            System.out.println(estudiante);
         }
     }
 
-    public void actualizarProducto(int id, String nuevoNombre, double nuevoPrecio) {
-        for(Producto producto : productos) {
-            if(producto.getId() == id){
-                producto.setNombre(nuevoNombre);
-                producto.setPrecio(nuevoPrecio);
-                System.out.println("Producto Actualizado: "+producto);
+    public void actualizarEstudiante(int id, String nuevoNombre, String nuevoGrado) {
+        for(Estudiante estudiante : estudiantes) {
+            if(estudiante.getId() == id){
+                estudiante.setNombre(nuevoNombre);
+                estudiante.setGrado(nuevoGrado);
+                System.out.println("Estudiante Actualizado: "+estudiante);
                 return;
             }
         }
-        System.out.println("Producto con ID " +id + "no encontrado.");
+        System.out.println("Estudiante con ID " +id + "no encontrado.");
     }
 
-    public void eliminarProducto(int id){
-        productos.removeIf(producto -> producto.getId()== id);
-        System.out.println("Producto con ID " + id + " Eliminado.");
+    public void eliminarEstudiante(int id){
+        estudiantes.removeIf(estudiante -> estudiante.getId()== id);
+        System.out.println("Estudiante con ID " + id + " Eliminado.");
     }
 }

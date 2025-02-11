@@ -10,10 +10,10 @@ public class App {
 
         do {
             System.out.println("\n --CRUD DE EJEMPLO AYELMER ---");
-            System.out.println("1. Agregar Producto");
-            System.out.println("2. Listar Productos");
-            System.out.println("3. Actualizar Producto");
-            System.out.println("4. Eliminar Producto");
+            System.out.println("1. Agregar Estudiante");
+            System.out.println("2. Listar Estudiantes");
+            System.out.println("3. Actualizar Estudiante");
+            System.out.println("4. Eliminar Estudiante");
             System.out.println("5. Salir");
             System.out.print("Seleciona una opción:");
             opcion = inp.nextInt();
@@ -25,26 +25,26 @@ public class App {
                     inp.nextLine();
                     System.out.print("Nombre: ");
                     String nombre = inp.nextLine();
-                    System.out.print("Precio: ");
-                    double precio = inp.nextDouble();
-                    estudianteServiceEstudianteService.agregarProducto(new Producto(id, nombre, precio));
+                    System.out.print("Grado: ");
+                    String grado = inp.nextLine();
+                    estudianteService.agregarEstudiante(new Estudiante(id, nombre, grado));
                     break;
                 case 2:
-                    estudianteServiceEstudianteService.listarProductos();
+                    estudianteService.listarEstudiantes();
                     break;
                 case 3:
-                    System.out.print("ID del producto a actualizar: ");
+                    System.out.print("ID del estudiante a actualizar: ");
                     int idActualizar = inp.nextInt();
                     System.out.print("Nuevo nombre: ");
                     String nuevoNombre = inp.nextLine();
-                    System.out.print("Nuevo Precio: ");
-                    double nuevoPrecio = inp.nextDouble();
-                    estudianteServiceEstudianteService.actualizarProducto(idActualizar, nuevoNombre, nuevoPrecio);
+                    System.out.print("Nuevo Grado: ");
+                    String nuevoGrado = inp.nextLine();
+                    estudianteService.actualizarEstudiante(idActualizar, nuevoNombre, nuevoGrado);
                     break;
                 case 4:
-                    System.out.print("Id del producto a eliminar: ");
+                    System.out.print("Id del estudiante a eliminar: ");
                     int idEliminar = inp.nextInt();
-                    estudianteServiceEstudianteService.eliminarProducto(idEliminar);
+                    estudianteService.eliminarEstudiante(idEliminar);
                     break;
                 case 5:
                     System.out.println("Saliendo del CRUD...");
